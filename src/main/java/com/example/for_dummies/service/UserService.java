@@ -1,5 +1,6 @@
 package com.example.for_dummies.service;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.example.for_dummies.model.User;
@@ -11,7 +12,13 @@ public class UserService {
 	@Autowired
 	private UserRepository  UserRepo ;
 	
-	public User createUser(User user) {  // Accepting the full User object
-        return UserRepo.save(user);  // Save the user object to the repository
+	@Autowired
+	private PasswordEncoder passwordEncoder ;
+	
+	public User createUser(User user) {  
+		//hash pass before saving
+		String hashPass = passwordEncoder.encode(user.getPassword());
+		user.setPassword(hashPass);
+        return UserRepo.save(user); 
     }
 }

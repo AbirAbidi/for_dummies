@@ -17,12 +17,13 @@ public class User {
 	private String number_of_papers;
 	private String password;
 	//TODO update the constructor 
-	public User( String id,String name,String LastName,int age, String EdLevel) {
+	public User( String id,String name,String LastName,int age, String EdLevel,String password) {
 		this.id= id ;
 		this.name = name;
 		this.LastName = LastName;
 		this.age = age;
 		this.EdLevel = EdLevel;
+		this.password = password;
 	}
 	
 	
