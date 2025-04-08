@@ -14,16 +14,20 @@ public class User {
 	private String EdLevel;
 	private String Email ;
 	private String bio;
-	private String number_of_papers;
+	private int number_of_papers;
 	private String password;
-	//TODO update the constructor 
-	public User( String id,String name,String LastName,int age, String EdLevel,String password) {
+	
+	
+	public User( String id,String name,String LastName,int age, String EdLevel,String password,String Email , String bio ,  int number_of_papers) {
 		this.id= id ;
 		this.name = name;
 		this.LastName = LastName;
 		this.age = age;
 		this.EdLevel = EdLevel;
 		this.password = password;
+		this.Email = Email ;
+		this.bio = bio; 
+		this.number_of_papers = number_of_papers ; 
 	}
 	
 	
@@ -36,11 +40,11 @@ public class User {
 		this.bio = bio;
 	}
 
-	public String getNumber_of_papers() {
+	public int getNumber_of_papers() {
 		return number_of_papers;
 	}
 
-	public void setNumber_of_papers(String number_of_papers) {
+	public void setNumber_of_papers(int number_of_papers) {
 		this.number_of_papers = number_of_papers;
 	}
 
