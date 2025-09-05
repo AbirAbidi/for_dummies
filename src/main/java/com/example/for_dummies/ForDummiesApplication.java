@@ -10,5 +10,6 @@ public class ForDummiesApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(ForDummiesApplication.class, args);
+        System.out.println("hello");
     }
 }

@@ -17,6 +17,7 @@ public class User {
 	private int number_of_papers;
 	private String password;
 	
+	public User() {}
 	
 	public User( String id,String name,String LastName,int age, String EdLevel,String password,String Email , String bio ,  int number_of_papers) {
 		this.id= id ;
